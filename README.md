@@ -74,7 +74,6 @@ The user interface is designed to be minimalistic yet informative, providing use
 Image Preview: Users can view the uploaded image before prediction.<br>
 Dynamic Feedback: Prediction result and accuracy are displayed post-upload, enhancing transparency.
 <hr>
-<h3>📞 Contact</h3><br>
+<h3>📞 Contact</h3>
 For any inquiries, please contact:<br>
-
 Email: sushantumap1234@gmail.com<br>
