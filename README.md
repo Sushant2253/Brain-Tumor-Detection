@@ -46,6 +46,8 @@ For more on [VGG19](https://www.tensorflow.org/api_docs/python/tf/keras/applicat
 <li>Install Python (>=3.6)</li>
 <li>Install required dependencies:</li>
 <li>pip install -r requirements.txt</li>
+<li>Download the Model from drive</li>
+[downlaod now](https://drive.google.com/file/d/1sYpezy9hW27YwPxvmn92his_eU-7UQpd/view?usp=sharing)
 </ul>
 <h4>Run the Application</h4>
 <ul>
