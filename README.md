@@ -29,7 +29,8 @@ Brain tumor detection is a crucial aspect of medical imaging, aimed at assisting
 </ul>
 
 <h3>⚙️ File Structure</h3>
-<img src="[path/to/image.jpg](https://ray.so/HHwV7t9)" alt="Description of image">
+![folder_structure](https://github.com/user-attachments/assets/034b8955-da68-42d6-baf1-7103793ed157)
+
 <br>
 ├── app.py                 # Main Flask application<br>
 ├── model.h5               # Trained model weights<br>
