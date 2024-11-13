@@ -28,7 +28,7 @@ Brain tumor detection is a crucial aspect of medical imaging, aimed at assisting
  <li> HTML/CSS/JavaScript: For the frontend interface, providing a user-friendly experience.</li>
 </ul>
 
-<h3>⚙️ File Structure</h3>
+<h3>⚙️ Folder Structure</h3>
 <img src="https://github.com/Sushant2253/Brain-Tumor-Detection/blob/main/folder_structure.png" alt="Folder Structure" width="850" height="600">
 
 
@@ -37,7 +37,7 @@ Brain tumor detection is a crucial aspect of medical imaging, aimed at assisting
 
 <p>In this project, we use the VGG19 architecture, a pre-trained model known for its depth and performance in image recognition tasks. VGG19 employs 19 layers with learnable weights and is effective in capturing fine-grained details, making it suitable for MRI image analysis.</p>
 
-[For a deeper understanding of CNNs, refer to this guide on CNNs.](https://www.ibm.com/topics/convolutional-neural-networks)<br>
+For a deeper understanding of CNNs, refer to [this guide](https://www.ibm.com/topics/convolutional-neural-networks) on CNNs.<br>
 For more on [VGG19](https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG19).<br>
 
 <h3>🚀 How to Use the Application</h3>
@@ -61,17 +61,18 @@ For more on [VGG19](https://www.tensorflow.org/api_docs/python/tf/keras/applicat
 </ul>
  
 <h3>📊 Model Details</h3>
-Base Model: VGG19 without the top classification layer, fine-tuned for this project.<br>
-Layers: Added custom layers for improved classification accuracy:<br>
-Flatten Layer: To reshape the output from convolution layers.<br>
-Dense Layers: 4608 and 1152 neurons with ReLU activation, followed by a final dense layer with softmax activation for binary classification.<br>
-Accuracy: The accuracy of each prediction is computed and displayed after image processing.<br>
+<ul> 
+<li>Base Model: VGG19 without the top classification layer, fine-tuned for this project.</li>
+<li>Layers: Added custom layers for improved classification accuracy.</li><ul>
+<li>Flatten Layer: To reshape the output from convolution layers.</li>
+<li>Dense Layers: 4608 and 1152 neurons with ReLU activation, followed by a final dense layer with softmax activation for binary classification.</li></ul>
+<li>Accuracy: The accuracy of each prediction is computed and displayed after image processing.</li>
+</ul>
 
 <h3>🎨 Frontend Design</h3>
 The user interface is designed to be minimalistic yet informative, providing users with easy access to upload and prediction functions. Key features include:<br>
-
 Image Preview: Users can view the uploaded image before prediction.<br>
-Dynamic Feedback: Prediction result and accuracy are displayed post-upload, enhancing transparency.<br>
+Dynamic Feedback: Prediction result and accuracy are displayed post-upload, enhancing transparency.
 <hr>
 <h3>📞 Contact</h3><br>
 For any inquiries, please contact:<br>
