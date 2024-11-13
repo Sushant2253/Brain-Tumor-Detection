@@ -1,0 +1,136 @@
+{% extends "import.html" %}
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        margin-top: 50px;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h2 {
+        color: #007bff;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .btn-upload {
+        background-color: #28a745;
+        color: white;
+        font-size: 1.1em;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
+    .btn-upload:hover {
+        background-color: #218838;
+    }
+
+    .btn-predict {
+        background-color: #17a2b8;
+        color: white;
+        font-size: 1.2em;
+        padding: 12px 20px;
+        border-radius: 5px;
+    }
+
+    .btn-predict:hover {
+        background-color: #138496;
+    }
+
+    .result-container {
+        margin-top: 30px;
+        font-size: 1.5em;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .loader {
+        display: none;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<div class="container">
+    <h2>Brain Tumor Detection Using Deep Learning</h2>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="btn-upload" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <img id="imagePreview" class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+        <button type="button" class="btn-predict" id="btn-predict">Predict!</button>
+    </div>
+
+    <div class="loader" id="loader"></div>
+
+    <div class="result-container" id="result">
+        <span id="prediction-result"></span><br>
+        <span id="accuracy-result"></span>
+    </div>
+</div>
+
+<script>
+    const imageUpload = document.getElementById('imageUpload');
+    const btnPredict = document.getElementById('btn-predict');
+    const resultContainer = document.getElementById('result');
+    const predictionResult = document.getElementById('prediction-result');
+    const accuracyResult = document.getElementById('accuracy-result');
+    const loader = document.getElementById('loader');
+
+    imageUpload.addEventListener('change', function (e) {
+        const reader = new FileReader();
+        reader.onload = function () {
+            document.getElementById('imagePreview').src = reader.result;
+            document.querySelector('.image-section').style.display = 'block';
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    btnPredict.addEventListener('click', function () {
+        const formData = new FormData(document.getElementById('upload-file'));
+        loader.style.display = 'block';
+        fetch('/predict', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            loader.style.display = 'none';
+            if (data.result) {
+                predictionResult.textContent = `Prediction: ${data.result}`;
+                // accuracyResult.textContent = `Prediction Accuracy: ${data.accuracy}%`;
+            } else {
+                predictionResult.textContent = 'Error: Unable to make a prediction.';
+                accuracyResult.textContent = '';
+            }
+        })
+        .catch(error => {
+            loader.style.display = 'none';
+            predictionResult.textContent = 'Error: Unable to make a prediction.';
+            accuracyResult.textContent = '';
+        });
+    });
+</script>
+
+{% endblock %}

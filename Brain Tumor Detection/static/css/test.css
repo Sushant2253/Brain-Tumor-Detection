@@ -1,0 +1,84 @@
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Restrict width for compact layout */
+    margin-top: 30px; /* Margin from the top */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#imageUpload {
+    display: block;
+    margin: 20px auto; /* Center the upload button */
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#imageUpload:hover {
+    background-color: #45a049;
+}
+
+.image-section {
+    text-align: center;
+}
+
+#btn-predict {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-predict:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Style for the image preview */
+#imagePreview {
+    max-width: 100%; /* Responsive width */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Loader (optional) */
+.loader {
+    margin: 20px auto;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
