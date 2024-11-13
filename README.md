@@ -37,22 +37,28 @@ Brain tumor detection is a crucial aspect of medical imaging, aimed at assisting
 
 <p>In this project, we use the VGG19 architecture, a pre-trained model known for its depth and performance in image recognition tasks. VGG19 employs 19 layers with learnable weights and is effective in capturing fine-grained details, making it suitable for MRI image analysis.</p>
 
-For a deeper understanding of CNNs, refer to this guide on CNNs.<br>
-For more on VGG19, explore VGG19 Architecture.<br>
+[For a deeper understanding of CNNs, refer to this guide on CNNs.](https://www.ibm.com/topics/convolutional-neural-networks)<br>
+For more on [VGG19](https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG19).<br>
 
 <h3>🚀 How to Use the Application</h3>
 <h4>Prerequisites</h4>
-Install Python (>=3.6)<br>
-Install required dependencies:<br>
-pip install -r requirements.txt<br>
-Run the Application<br>
-Start the Flask Server:<br>
-python app.py<br>
-Access the Application: Open a browser and go to http://127.0.0.1:5000/<br>
-Usage<br>
-Upload MRI Image: Select an MRI image file (formats: .png, .jpg, .jpeg).<br>
-Predict: Click on the “Predict” button.<br>
-View Results: The app will display the result (either "Yes Brain Tumor" or "No Brain Tumor") <br>
+<ul>
+<li>Install Python (>=3.6)</li>
+<li>Install required dependencies:</li>
+<li>pip install -r requirements.txt</li>
+</ul>
+<h4>Run the Application</h4>
+<ul>
+<li>Start the Flask Server:<br>
+<li>python app.py</li>
+<li>Access the Application: Open a browser and go to http://127.0.0.1:5000/</li>
+</ul>
+<h4>Usage</h4>
+ <ul>
+<li>Upload MRI Image: Select an MRI image file (formats: .png, .jpg, .jpeg).</li>
+<li>Predict: Click on the “Predict” button.</li>
+<li>View Results: The app will display the result (either "Yes Brain Tumor" or "No Brain Tumor") </li>
+</ul>
  
 <h3>📊 Model Details</h3>
 Base Model: VGG19 without the top classification layer, fine-tuned for this project.<br>
