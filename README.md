@@ -29,20 +29,9 @@ Brain tumor detection is a crucial aspect of medical imaging, aimed at assisting
 </ul>
 
 <h3>⚙️ File Structure</h3>
-<img src="https://github.com/Sushant2253/Brain-Tumor-Detection/blob/main/folder_structure.png" alt="Folder Structure" width="500">
+<img src="https://github.com/Sushant2253/Brain-Tumor-Detection/blob/main/folder_structure.png" alt="Folder Structure" width="850" height="600">
 
-<br>
-├── app.py                 # Main Flask application<br>
-├── model.h5               # Trained model weights<br>
-├── templates/<br>
-│   ├── index.html         # Main page for image upload and prediction<br>
-│   ├── import.html        # Layout template with navigation<br>
-├── static/<br>
-│   ├── css/test.css       # Custom CSS styles<br>
-│   ├── js/<br>
-│       ├── newjs.js       # JavaScript for image preview and UX<br>
-├── README.md              # Project documentation<br>
-<br>
+
 <h3>🧠 About Convolutional Neural Networks (CNN)</h3>
 <p>Convolutional Neural Networks (CNNs) are deep learning architectures commonly used for image processing tasks. CNNs are particularly effective in image classification due to their ability to capture spatial hierarchies in images.</p>
 
